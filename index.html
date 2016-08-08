@@ -12,34 +12,42 @@
 
     <div class="answers">
       <h1>Answer 1</h1>
+      <p>Show me how to calculate the average price of all items.</p>
+      <p>items.reduce((total, current) => total + current.price/items.length, 0);</p>
       <p id="ans1">
-      
       </p>
 
       <h1>Answer 2</h1>
+      <p>Show me how to get an array of items that cost between $14.00 and $18.00 USD</p>
+      <p>items.filter((item) => 14 < item.price && item.price < 18).map((item) => `${item.title}`);</p>
       <p id="ans2">
-
       </p>
 
       <h1>Answer 3</h1>
+      <p>Which item has a "GBP" currency code? Display it's name and price.</p>
+      <p>items.filter((item) => item.currency_code === "GBP").map((item) => `${item.title} costs £${item.price}`);</p>
       <p id="ans3">
-
       </p>
 
       <h1>Answer 4</h1>
+      <p>Display a list of all items who are made of wood.</p>
+      <p>items.filter((item) => item.materials.includes("wood")).map((item) => `${item.title}`);</p>
       <p id="ans4">
 
       </p>
 
       <h1>Answer 5</h1>
+      <p>Which items are made of eight or more materials? Display the name, number of items and the items it is made of.</p>
+      <p>items.filter((item) => item.materials.length >= 8).map((item) => `${item.title} has ${item.materials.length} materials: <br> ${item.materials.join('<br>')}`);</p>
       <p id="ans5">
-
       </p>
 
       <h1>Answer 6</h1>
+      <p>How many items were made by their sellers?</p>
+      <p>items.filter((item) => item.who_made === "i_did").length;</p>
       <p id="ans6">
-
       </p>
+
     </div>
 
     <footer>
