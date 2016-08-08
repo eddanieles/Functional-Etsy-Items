@@ -1,6 +1,12 @@
+body {
+  margin: 0;
+}
+
 header {
-  background: url(banner.jpg);
-  height: 131px;
+  background-color: #EEEEEE;
+  img {
+    width: 100%;
+  }
 }
 
 .answers {

@@ -1,6 +1,10 @@
+body {
+  margin: 0; }
+
 header {
-  background: url(banner.jpg);
-  height: 131px; }
+  background-color: #EEEEEE; }
+  header img {
+    width: 100%; }
 
 .answers {
   background-color: #EEEEEE;
