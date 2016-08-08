@@ -7,31 +7,32 @@ $(document).ready(function(){
   //Show me how to get an array of items that cost between $14.00 and $18.00 USD
   var item_btwn14_18 = items.filter((item) => 14 < item.price && item.price < 18).map((item) => `${item.title}`);
 
-  for (var i = 0; i < item_btwn14_18.length; i++) {
-    $("#ans2").append(`<p> ${item_btwn14_18[i]} </p>`);
-  }
-
+  item_btwn14_18.forEach(function(thing){
+    $("#ans2").append(`<p> ${thing} </p>`);
+  })
 
 
   //  Which item has a "GBP" currency code? Display it's name and price.
   var itemGBP = items.filter((item) => item.currency_code === "GBP").map((item) => `${item.title} costs £${item.price}`);
 
-  for (var i = 0; i < itemGBP.length; i++) {
-    $("#ans3").append(`<p> ${itemGBP[i]} </p>`);
-  }
+  itemGBP.forEach(function(thing){
+    $("#ans3").append(`<p> ${thing} </p>`);
+  })
+
 
   //Display a list of all items who are made of wood.
   var wood_items = items.filter((item) => item.materials.includes("wood")).map((item) => `${item.title}`);
-  for (var i = 0; i < wood_items.length; i++) {
-    $("#ans4").append(`<p> ${wood_items[i]} is made of wood. </p>`);
-  }
+
+  wood_items.forEach(function(thing){
+    $("#ans4").append(`<p>${thing} is made of wood.</p>`)
+  })
 
   //Which items are made of eight or more materials? Display the name, number of items and the items it is made of.
   var atleast_8materials = items.filter((item) => item.materials.length >= 8).map((item) => `${item.title} has ${item.materials.length} materials: <br> ${item.materials.join('<br>')}`);
 
-  for (var i = 0; i < atleast_8materials.length; i++) {
-    $("#ans5").append(`<p> ${atleast_8materials[i]}</p>`);
-  }
+  atleast_8materials.forEach(function(thing){
+    $("#ans5").append(`<p>${thing}</p>`);
+  })
 
   //How many items were made by their sellers?
   var madeby_sellers_length = items.filter((item) => item.who_made === "i_did").length;
