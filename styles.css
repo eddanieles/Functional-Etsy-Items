@@ -1,0 +1,14 @@
+header {
+  background: url(banner.jpg);
+  height: 131px; }
+
+.answers {
+  background-color: #EEEEEE;
+  color: #4B484F;
+  text-align: center; }
+
+footer {
+  color: #EEEEEE;
+  background-color: #4B484F;
+  height: 131px;
+  text-align: center; }
